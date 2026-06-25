@@ -18,11 +18,6 @@ import {
   BarChart3,
   Shield,
   Moon,
-  Zap,
-  Lock,
-  RefreshCw,
-  Smartphone,
-  Share2,
   Star,
   Disc,
   Plus,
@@ -65,15 +60,6 @@ export default function Landing() {
     { title: "Dark Mode", description: "Work comfortably at any hour with an elegant, expertly crafted dark visual theme.", icon: Moon, color: "from-blue-500 to-cyan-400" },
   ];
 
-  const whyChooseUsList = [
-    { title: "Fast Performance", description: "Built on state-of-the-art web technology for blazing fast load times and rapid interactions.", icon: Zap },
-    { title: "Secure Authentication", description: "Multi-layer security with robust Email/Password and Google OAuth integration.", icon: Lock },
-    { title: "Real-time Updates", description: "Every modification, status change, and message syncs instantly across all active devices.", icon: RefreshCw },
-    { title: "Beautiful UI", description: "Premium design aesthetics featuring sleek glassmorphism, rich typography, and smooth animations.", icon: Star },
-    { title: "Mobile Friendly", description: "Flawless responsive layouts allowing you to manage projects on desktop, tablet, or mobile.", icon: Smartphone },
-    { title: "Easy Collaboration", description: "Invite team members in one click and start collaborating without complicated onboarding.", icon: Share2 },
-  ];
-
   const testimonials = [
     { quote: "GPMS transformed how our remote engineering team operates. The real-time sync and Kanban boards are incredibly intuitive.", author: "Sarah Jenkins", role: "VP of Engineering at TechNova", avatar: "SJ", stars: 5 },
     { quote: "We replaced three separate SaaS tools with GPMS. Having chat, tasks, and analytics in a single beautiful dark theme is a game-changer.", author: "David Krell", role: "Product Lead at Lumina Labs", avatar: "DK", stars: 5 },
@@ -113,7 +99,6 @@ export default function Landing() {
             <a href="#features" className="hover:text-cyan-400 transition-colors">Features</a>
             <a href="#preview" className="hover:text-cyan-400 transition-colors">Dashboard</a>
             <a href="#pricing" className="hover:text-cyan-400 transition-colors">Pricing</a>
-            <a href="#about" className="hover:text-cyan-400 transition-colors">Why Us</a>
             <a href="#contact" className="hover:text-cyan-400 transition-colors">Contact</a>
           </nav>
         </div>
@@ -403,8 +388,6 @@ export default function Landing() {
         {/* 5. Dashboard Preview Section */}
         <section id="preview" className="py-28 bg-slate-900/30 border-y border-slate-800/50 relative backdrop-blur-md">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 text-center">
-            <h2 className="text-xs font-bold tracking-widest text-indigo-400 uppercase mb-12">UNCOMPROMISING VISUAL EXCELLENCE</h2>
-
             <div className="flex flex-wrap items-center justify-center gap-4 mb-12">
               {[
                 { id: "kanban", label: "Project Boards", icon: Layout },
@@ -569,42 +552,7 @@ export default function Landing() {
           </div>
         </section>
 
-        {/* 6. Why Choose Us Section */}
-        <section id="about" className="py-28 px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto">
-          <div className="text-center max-w-3xl mx-auto mb-20">
-            <h2 className="text-xs font-bold tracking-widest text-purple-400 uppercase mb-3">ENGINEERED FOR EXCELLENCE</h2>
-            <p className="text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-100">
-              Why fast-growing startups choose GPMS.
-            </p>
-            <p className="mt-4 text-lg text-slate-400 font-normal">
-              We built GPMS from the ground up to solve the frustrations of clunky, outdated project management tools. Here is how we stand apart.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {whyChooseUsList.map((item, idx) => {
-              const IconComp = item.icon;
-              return (
-                <motion.div
-                  key={idx}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: idx * 0.05 }}
-                  className="p-8 rounded-3xl bg-slate-900/40 border border-slate-800/80 hover:border-indigo-500/50 backdrop-blur-xl shadow-xl transition-all duration-300 hover:-translate-y-1 group"
-                >
-                  <div className="w-12 h-12 rounded-2xl bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center mb-6 group-hover:bg-indigo-500 group-hover:text-white text-indigo-400 transition-all duration-300 shadow-md">
-                    <IconComp className="w-6 h-6" />
-                  </div>
-                  <h3 className="text-xl font-bold text-slate-100 mb-3 group-hover:text-cyan-400 transition-colors">{item.title}</h3>
-                  <p className="text-slate-400 text-sm leading-relaxed font-normal">{item.description}</p>
-                </motion.div>
-              );
-            })}
-          </div>
-        </section>
-
-        {/* 7. Workflow Section */}
+        {/* 6. Workflow Section */}
         <section className="py-24 bg-slate-900/30 border-y border-slate-800/50 backdrop-blur-md">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 text-center">
             <h2 className="text-xs font-bold tracking-widest text-cyan-400 uppercase mb-3">SEAMLESS OPERATIONAL WORKFLOW</h2>
@@ -642,10 +590,7 @@ export default function Landing() {
         {/* 8. Testimonials Section */}
         <section className="py-28 px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-20">
-            <h2 className="text-xs font-bold tracking-widest text-indigo-400 uppercase mb-3">LOVED BY PRODUCT LEADERS</h2>
-            <p className="text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-100">
-              What our users are saying.
-            </p>
+            <h2 className="text-xs font-bold tracking-widest text-indigo-400 uppercase">LOVED BY PRODUCT LEADERS</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
