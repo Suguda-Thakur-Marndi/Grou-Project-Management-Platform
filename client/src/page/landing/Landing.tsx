@@ -18,7 +18,6 @@ import {
   BarChart3,
   Shield,
   Moon,
-  Star,
   Disc,
   Plus,
   Minus,
@@ -58,12 +57,6 @@ export default function Landing() {
     { title: "Analytics Dashboard", description: "Gain actionable insights into team velocity, overdue tasks, and project completion rates.", icon: BarChart3, color: "from-indigo-500 to-purple-600" },
     { title: "Role Based Access", description: "Ensure enterprise-grade security with fine-grained permissions and custom user roles.", icon: Shield, color: "from-cyan-500 to-blue-600" },
     { title: "Dark Mode", description: "Work comfortably at any hour with an elegant, expertly crafted dark visual theme.", icon: Moon, color: "from-blue-500 to-cyan-400" },
-  ];
-
-  const testimonials = [
-    { quote: "GPMS transformed how our remote engineering team operates. The real-time sync and Kanban boards are incredibly intuitive.", author: "Sarah Jenkins", role: "VP of Engineering at TechNova", avatar: "SJ", stars: 5 },
-    { quote: "We replaced three separate SaaS tools with GPMS. Having chat, tasks, and analytics in a single beautiful dark theme is a game-changer.", author: "David Krell", role: "Product Lead at Lumina Labs", avatar: "DK", stars: 5 },
-    { quote: "The speed and visual excellence of this platform make managing 50+ client projects a breeze. Highly recommended for any growing startup.", author: "Elena Rostova", role: "Founder at Apex Agency", avatar: "ER", stars: 5 },
   ];
 
   const faqList = [
@@ -587,47 +580,7 @@ export default function Landing() {
           </div>
         </section>
 
-        {/* 8. Testimonials Section */}
-        <section className="py-28 px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto">
-          <div className="text-center max-w-3xl mx-auto mb-20">
-            <h2 className="text-xs font-bold tracking-widest text-indigo-400 uppercase">LOVED BY PRODUCT LEADERS</h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((test, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="p-8 rounded-3xl bg-slate-900/50 border border-slate-800/80 hover:border-slate-700 backdrop-blur-xl shadow-xl flex flex-col justify-between group hover:-translate-y-1 transition-all duration-300"
-              >
-                <div>
-                  <div className="flex items-center gap-1 mb-6 text-yellow-400">
-                    {[...Array(test.stars)].map((_, sIdx) => (
-                      <Star key={sIdx} className="w-5 h-5 fill-yellow-400" />
-                    ))}
-                  </div>
-                  <p className="text-slate-300 text-base leading-relaxed font-medium mb-8">
-                    &ldquo;{test.quote}&rdquo;
-                  </p>
-                </div>
-                <div className="flex items-center gap-4 pt-6 border-t border-slate-800/80">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-tr from-blue-600 to-purple-600 flex items-center justify-center font-bold text-white text-base shadow-md">
-                    {test.avatar}
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="font-bold text-slate-100 group-hover:text-cyan-400 transition-colors">{test.author}</span>
-                    <span className="text-xs text-slate-500 font-medium">{test.role}</span>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </section>
-
-        {/* 9. Pricing Section */}
+        {/* 7. Pricing Section */}
         <section id="pricing" className="py-28 bg-slate-900/30 border-y border-slate-800/50 backdrop-blur-md">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 text-center">
             <h2 className="text-xs font-bold tracking-widest text-cyan-400 uppercase mb-3">TRANSPARENT, SCALABLE PRICING</h2>
